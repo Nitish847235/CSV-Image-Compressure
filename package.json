@@ -1,0 +1,27 @@
+{
+  "name": "csv_compressure",
+  "version": "1.0.0",
+  "description": "This project is use for compressing csv file",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nitish Kumar",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.5",
+    "csv-parser": "^3.0.0",
+    "csv-writer": "^1.6.0",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "mongoose": "^8.6.0",
+    "mongoose-paginate-v2": "^1.8.3",
+    "mongoose-unique-validator": "^5.0.1",
+    "multer": "^1.4.5-lts.1",
+    "sharp": "^0.33.5",
+    "uuid": "^10.0.0"
+  }
+}

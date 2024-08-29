@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSV File Upload</title>
+    <link rel="stylesheet" href="/styles.css">
+    <style>
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        .input-format {
+            margin-top: 30px;
+            text-align: left;
+        }
+        table {
+            margin: 0 auto;
+            border-collapse: collapse;
+            width: 100%;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+            text-align: center;
+        }
+        td {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Upload CSV File</h1>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" accept=".csv" required>
+            <button type="submit">Upload</button>
+        </form>
+
+        <div class="input-format">
+            <h2>Input CSV Format</h2>
+            <p>Please ensure your CSV file follows the format below:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Serial Number</th>
+                        <th>Product Name</th>
+                        <th>Input Image URLs</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>SKU1</td>
+                        <td>https://www.example.com/image1.jpg, https://www.example.com/image2.jpg</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>SKU2</td>
+                        <td>https://www.example.com/image3.jpg, https://www.example.com/image4.jpg</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p><strong>Note:</strong> The "Input Image URLs" field should contain comma-separated image URLs.</p>
+        </div>
+    </div>
+</body>
+</html>

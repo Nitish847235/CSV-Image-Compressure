@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSV File Output</title>
+    <link rel="stylesheet" href="/styles.css">
+    <style>
+        .container {
+            max-width: 90%;
+            margin: 50px auto;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        table {
+            margin: 20px auto;
+            border-collapse: collapse;
+            width: 100%;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+            text-align: center;
+        }
+        td {
+            text-align: center;
+        }
+        .download-link {
+            margin-top: 20px;
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .download-link:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Processed CSV File</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Serial Number</th>
+                    <th>Product Name</th>
+                    <th>Input Image URLs</th>
+                    <th>Output Image URLs</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% products.forEach(function(product) { %>
+                    <tr>
+                        <td><%= product.serialNumber %></td>
+                        <td><%= product.productName %></td>
+                        <td><%= product.inputImageUrls.join(', ') %></td>
+                        <td><%= product.outputImageUrls.join(', ') %></td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+        <a class="download-link" href="/uploads/<%= outputFileName %>" download>Download Processed CSV</a>
+    </div>
+</body>
+</html>
