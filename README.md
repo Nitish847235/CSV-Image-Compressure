@@ -32,5 +32,24 @@ This project provides an asynchronous system for processing image data from CSV 
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/image-processing-system.git
+   git clone https://github.com/Nitish847235/CSV-Image-Compressure.git
    cd image-processing-system
+
+2. Install the required dependencies:
+   ```bash
+   npm install
+2. Install the required dependencies:
+   ```bash
+   npm install
+
+3. Set up environment variables:
+    Create a .env file in the root directory with the following variables
+   ```bash
+   PORT=9000
+    MONGODB_URI=mongodb://localhost:27017/imageProcessingDB
+
+4. Start the application:
+   ```bash
+   npm run dev
+
+
